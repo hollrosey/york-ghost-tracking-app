@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "express": "^4.18.3",
+    "fs.promises": "^0.1.2",
+    "nodemon": "^3.1.0",
+    "uuid": "^9.0.1"
+  },
+  "name": "york-ghost-tracking-app",
+  "description": "An app dedicated to tracking collections of ghosts from The York Ghost Merchants",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
