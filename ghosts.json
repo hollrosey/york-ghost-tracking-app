@@ -1,16 +1,16 @@
 [
     {
         "id": " ",
-        "size": " ",
-        "type": " ",
-        "colours": " ",
-        "boughtFrom": " ",
-        "cost": " ",
+        "size": "Large",
+        "type": "The Resident Glass Ghost",
+        "colours": "Transparent",
+        "boughtFrom": "Birthday gift",
+        "cost": "N/A",
         "stamped": {
-            "yesOrNo": " ",
-            "maker": " "
+            "yesOrNo": "No",
+            "maker": "N/A"
         },
         "image": " " 
-    },
+    }
 ]
 

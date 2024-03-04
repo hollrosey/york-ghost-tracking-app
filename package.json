@@ -9,10 +9,13 @@
   "description": "An app dedicated to tracking collections of ghosts from The York Ghost Merchants",
   "version": "1.0.0",
   "main": "app.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Holly Massey",
   "license": "ISC"
 }
