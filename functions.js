@@ -14,9 +14,17 @@ export async function getGhosts(ghostFile) {
   }
 }
 
-// Get a ghost by ID (id in here is a placeholder- remember!)
+// Get a ghost by ID 
 export async function getGhostByID(id) {
   try {
+    const data = await fs.readFile(fileName, "utf-8");
+    const jsonData = JSON.parse(data);
+    const find = jsonData.find(({ id }) => id === id);
+    if (find) {
+        return find;
+    } else {
+        throw new Error(`Ghost with id ${id} not found.`);
+    }
   } catch (error) {
     console.error("Error reading file:", error);
   }
