@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 
 const ghostFile = "ghosts.json";
 
-// Get all ghosts from ghosts.json
+// Get all ghosts from ghosts.json WORKING
 export async function getGhosts(ghostFile) {
   try {
     const data = await fs.readFile(ghostFile, "utf-8");
@@ -30,7 +30,7 @@ export async function getGhostByID(id) {
   }
 }
 
-// Create a new ghost
+// Create a new ghost WORKING
 export async function createGhost(newGhost, ghostFile) {
   try {
     const data = await fs.readFile(ghostFile, "utf-8");

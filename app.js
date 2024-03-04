@@ -11,13 +11,13 @@ app.use(express.json());
 
 
 // Middleware to log to the console every request we get
-// HTTP method and the requested path
+// HTTP method and the requested path WORKING
 app.use(function (req, res, next) {
     console.log(`Request received as ${req.method} request to ${req.path}`);
     next();
   });
 
-// Write a get request for all ghosts
+// Write a get request for all ghosts WORKING
 app.get("/ghosts", async function (req, res) {
 
     let ghosts = await getGhosts(ghostFile);
@@ -25,8 +25,8 @@ app.get("/ghosts", async function (req, res) {
     res.status(200).json({ success: true, payload: ghosts })
 });
 
-// Write a get request for get ghost by ID
-app.get("/ghosts", async function (req, res) {
+// Write a get request for get ghost by ID (not working correctly)
+app.get("/ghosts/:id", async function (req, res) {
 
     const id = req.params.id;
 
@@ -45,8 +45,8 @@ app.post("/ghosts", async function (req, res) {
     res.status(200).json({ success: true, payload: createdGhost})
 });
 
-// Write a patch request to update ghost by ID
-app.patch("/ghosts", async function (req, res) {
+// Write a patch request to update ghost by ID (not working correctly)
+app.patch("/ghosts/:id", async function (req, res) {
 
     const ghostID = req.params.id;
 
@@ -61,8 +61,8 @@ app.patch("/ghosts", async function (req, res) {
     res.status(200).json({ success: true, payload: updatedData })
 });
 
-// Write a delete request to delete a recipe
-app.delete("/ghosts", async function (req, res) {
+// Write a delete request to delete a recipe WORKING
+app.delete("/ghosts/:id", async function (req, res) {
 
     const ghostID = req.params.id;
 
@@ -75,3 +75,6 @@ app.delete("/ghosts", async function (req, res) {
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
   });
+
+  // TODO:
+  // Debug get by ID and patch by ID (only getting same ghost)

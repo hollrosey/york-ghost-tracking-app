@@ -1,16 +1,28 @@
 [
-    {
-        "id": "535F9F09-5A00-43AD-81B5-147ABEB87172",
-        "size": "Large",
-        "type": "The Resident Glass Ghost",
-        "colours": "Transparent",
-        "boughtFrom": "Birthday gift",
-        "cost": "N/A",
-        "stamped": {
-            "yesOrNo": "No",
-            "maker": "N/A"
-        },
-        "image": " " 
-    }
+  {
+    "size": "Large",
+    "type": "The Resident Glass Ghost",
+    "colours": "Transparent",
+    "boughtFrom": "Birthday gift",
+    "cost": "N/A",
+    "stamped": {
+      "yesOrNo": "No",
+      "maker": "N/A"
+    },
+    "image": " ",
+    "id": "535F9F09-5A00-43AD-81B5-147ABEB87172"
+  },
+  {
+    "size": "Large",
+    "type": "The Astronomer - Clandestine release",
+    "colours": "Blue stone with orange swirly dip",
+    "boughtFrom": "YGM Website",
+    "cost": "£39",
+    "stamped": {
+      "yesOrNo": "Yes",
+      "maker": "Ms Derry"
+    },
+    "image": " ",
+    "id": "0a2f5800-66b1-43d1-a6b9-48d704323202"
+  }
 ]
-
