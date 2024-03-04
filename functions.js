@@ -14,16 +14,16 @@ export async function getGhosts(ghostFile) {
   }
 }
 
-// Get a ghost by ID 
+// Get a ghost by ID
 export async function getGhostByID(id) {
   try {
     const data = await fs.readFile(fileName, "utf-8");
     const jsonData = JSON.parse(data);
     const find = jsonData.find(({ id }) => id === id);
     if (find) {
-        return find;
+      return find;
     } else {
-        throw new Error(`Ghost with id ${id} not found.`);
+      throw new Error(`Ghost with id ${id} not found.`);
     }
   } catch (error) {
     console.error("Error reading file:", error);
@@ -33,6 +33,18 @@ export async function getGhostByID(id) {
 // Create a new ghost
 export async function createGhost(newGhost, ghostFile) {
   try {
+    const data = await fs.readFile(fileName, "utf-8");
+
+    const jsonData = JSON.parse(data);
+
+    const newGhostID = uuidv4();
+
+    newGhost.id = newGhostID;
+    jsonData.push(newGhost);
+
+    await fs.writeFile(ghostFile, JSON.stringify(jsonData, null, 2));
+
+    return newGhost;
   } catch (error) {
     console.error("Error creating ghost:", error);
   }
