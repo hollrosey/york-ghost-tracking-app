@@ -13,4 +13,5 @@ JSON object template:
          "yesOrNo": " ",
          "maker": " ",
      } 
+     "image": " " 
  },
